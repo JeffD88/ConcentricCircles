@@ -1,0 +1,41 @@
+###############################################################################
+# NETHook function table			
+###############################################################################
+#
+# Name		: ConcentricCircles.ft
+# NETHook 	: ConcentricCircles.dll
+# Date		: 
+# Author	: 
+# Notes		:  ** Update all PROJECT_NAME references with the projects name **
+# Language	: C#
+#
+###############################################################################
+
+
+######################
+# ASSIGN A UNIQUE NAME
+######################
+APPLICATION "__ConcentricCircles__"
+
+######################
+# NETHook LOCATION
+######################
+#
+# Update paths below to match your install path and project name.
+FUNC_DLL   "CHOOKS\ConcentricCircles.dll"
+RES_DLL    "SAME"
+dnRES_NAME "ConcentricCircles.FunctionTable.Resource"
+CATEGORY   "Concentric Circles"
+
+##############################################################################
+# Public functions here
+##############################################################################
+#
+# The main system entry point defined in NethookMain.cs
+FUNCTION NET "Run"
+    dnSPNG "Circle16"
+    dnLPNG "Circle32"
+    dnTIP  "RunTip"
+END_FUNCTION
+
+# EOF
