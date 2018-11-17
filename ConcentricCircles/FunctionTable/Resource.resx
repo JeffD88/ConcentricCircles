@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Circle16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circle16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ConcentricPattern16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Assets\ConcentricPattern16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Circle32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circle32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ConcentricPattern32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Assets\ConcentricPattern32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RunTip" xml:space="preserve">
-    <value>Creates an expanding pattren of concentric circles where the next radius is equal to (Previous Radius * Radius Change) + Starting Radius
-Concentric Circles</value>
+    <value>Creates an expanding pattren of concentric shapes where the next radius is equal to (Previous Radius * Radius Change) + Starting Radius
+Concentric Patterns</value>
     <comment>Access modifier is set to public which allows localization</comment>
   </data>
 </root>

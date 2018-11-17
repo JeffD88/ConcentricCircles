@@ -48,7 +48,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Views\Icon\Circle.ico</ApplicationIcon>
+    <ApplicationIcon>Views\Icon\ConcentricPattern.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NETHook3_0">
@@ -78,16 +78,12 @@
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ConcentricCircleService.cs" />
-    <Compile Include="Services\IConcentricCircleService.cs" />
+    <Compile Include="Services\ConcentricPatternService.cs" />
+    <Compile Include="Services\IConcentricPatternService.cs" />
     <Compile Include="ViewModel\MainViewViewModel.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="FunctionTable\Assets\Circle16.png" />
-    <None Include="FunctionTable\Assets\Circle30.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FunctionTable\ConcentricCircles.ft" />
@@ -113,9 +109,11 @@
     <Resource Include="Views\Images\OK.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Circle32.png" />
-    <None Include="Resources\Circle16.png" />
-    <Resource Include="Views\Icon\Circle.ico" />
+    <Resource Include="Views\Icon\ConcentricPattern.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FunctionTable\Assets\ConcentricPattern16.png" />
+    <Content Include="FunctionTable\Assets\ConcentricPattern32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

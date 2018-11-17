@@ -15,9 +15,15 @@
     {
         #region Private Fields
 
+        private int patternTypeIndex;
+
         private Point3D centerPoint;
 
-        private double startDiameter;
+        private double startDiameterX;
+
+        private double startDiameterY;
+
+        private bool yDiameterEnabled;
 
         private double percentChange;
 
@@ -27,21 +33,22 @@
 
         private readonly Window view;
 
-        private readonly IConcentricCircleService concentricCircle;
+        private readonly IConcentricPatternService concentricPattern;
 
         #endregion
 
         #region Construction
 
-        public MainViewViewModel(Window view, ConcentricCircleService concentricCircle)
+        public MainViewViewModel(Window view, ConcentricPatternService concentricPattern)
         {
             this.view = view;
-            this.concentricCircle = concentricCircle;
+            this.concentricPattern = concentricPattern;
 
             this.SelectPoint = new DelegateCommand(this.OnSelectPoint);
             this.OKCommand = new DelegateCommand(this.OnOKCommand);
             this.CancelCommand = new DelegateCommand(this.OnCancelCommand);
 
+            this.PatternTypeIndex = 0;
             this.centerPoint = new Point3D(0.0, 0.0, 0.0);
             this.IsCollapsing = false;
         }
@@ -58,13 +65,54 @@
 
         #region Public Properties
 
-        public double StartDiameter
+        public int PatternTypeIndex
         {
-            get => this.startDiameter;
+            get => this.patternTypeIndex;
+
             set
             {
-                this.startDiameter = value;
-                OnPropertyChanged(nameof(this.StartDiameter));
+                if (value == 0)
+                {
+                    this.StartDiameterY = 0.0;
+                    this.YDiameterEnabled = false;
+                }
+                else
+                {
+                    this.YDiameterEnabled = true;
+                }
+
+                this.patternTypeIndex = value;
+                this.OnPropertyChanged(nameof(this.PatternTypeIndex));
+            }
+        }
+
+        public double StartDiameterX
+        {
+            get => this.startDiameterX;
+            set
+            {
+                this.startDiameterX = value;
+                OnPropertyChanged(nameof(this.StartDiameterX));
+            }
+        }
+
+        public double StartDiameterY
+        {
+            get => this.startDiameterY;
+            set
+            {
+                this.startDiameterY = value;
+                OnPropertyChanged(nameof(this.StartDiameterY));
+            }
+        }
+
+        public bool YDiameterEnabled
+        {
+            get => this.yDiameterEnabled;
+            set
+            {
+                this.yDiameterEnabled = value;
+                OnPropertyChanged(nameof(this.YDiameterEnabled));
             }
         }
 
@@ -112,12 +160,22 @@
 
         private void OnOKCommand(object parameter)
         {
-            if (IsCollapsing)
+            if (PatternTypeIndex == 0)
             {
-                concentricCircle.DrawCollapsing(centerPoint, StartDiameter, PercentChange, NumberOfInstances);
-            }               
-            else             
-                concentricCircle.DrawExpanding(centerPoint, StartDiameter, PercentChange, NumberOfInstances);
+                if (IsCollapsing)               
+                    concentricPattern.DrawCollapsing(centerPoint, StartDiameterX, PercentChange, NumberOfInstances);
+                
+                else
+                    concentricPattern.DrawExpanding(centerPoint, StartDiameterX, PercentChange, NumberOfInstances);
+            }
+            else
+            {
+                if (IsCollapsing)
+                    concentricPattern.DrawCollapsing(centerPoint, StartDiameterX, StartDiameterY, PercentChange, NumberOfInstances);
+
+                else
+                    concentricPattern.DrawExpanding(centerPoint, StartDiameterX, StartDiameterY, PercentChange, NumberOfInstances);
+            }
 
             this.view.Close();
         }

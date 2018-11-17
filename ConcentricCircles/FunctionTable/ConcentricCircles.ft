@@ -33,8 +33,8 @@ CATEGORY   "Concentric Circles"
 #
 # The main system entry point defined in NethookMain.cs
 FUNCTION NET "Run"
-    dnSPNG "Circle16"
-    dnLPNG "Circle32"
+    dnSPNG "ConcentricPattern16"
+    dnLPNG "ConcentricPattern32"
     dnTIP  "RunTip"
 END_FUNCTION
 

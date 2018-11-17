@@ -14,7 +14,7 @@ namespace ConcentricCircles.Views
         public MainView()
         {
             InitializeComponent();
-            this.DataContext = new MainViewViewModel(this, new ConcentricCircleService());
+            this.DataContext = new MainViewViewModel(this, new ConcentricPatternService());
         }
     }
 }

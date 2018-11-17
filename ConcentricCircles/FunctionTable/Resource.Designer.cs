@@ -63,9 +63,9 @@ namespace ConcentricCircles.FunctionTable {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Circle16 {
+        internal static System.Drawing.Bitmap ConcentricPattern16 {
             get {
-                object obj = ResourceManager.GetObject("Circle16", resourceCulture);
+                object obj = ResourceManager.GetObject("ConcentricPattern16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,16 +73,16 @@ namespace ConcentricCircles.FunctionTable {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Circle32 {
+        internal static System.Drawing.Bitmap ConcentricPattern32 {
             get {
-                object obj = ResourceManager.GetObject("Circle32", resourceCulture);
+                object obj = ResourceManager.GetObject("ConcentricPattern32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Creates an expanding pattren of concentric circles where the next radius is equal to (Previous Radius * Radius Change) + Starting Radius
-        ///Concentric Circles.
+        ///   Looks up a localized string similar to Creates an expanding pattren of concentric shapes where the next radius is equal to (Previous Radius * Radius Change) + Starting Radius
+        ///Concentric Patterns.
         /// </summary>
         internal static string RunTip {
             get {
