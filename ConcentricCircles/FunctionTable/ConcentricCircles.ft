@@ -25,7 +25,7 @@ APPLICATION "__ConcentricCircles__"
 FUNC_DLL   "CHOOKS\ConcentricCircles.dll"
 RES_DLL    "SAME"
 dnRES_NAME "ConcentricCircles.FunctionTable.Resource"
-CATEGORY   "Concentric Circles"
+CATEGORY   "Concentric Patterns"
 
 ##############################################################################
 # Public functions here
