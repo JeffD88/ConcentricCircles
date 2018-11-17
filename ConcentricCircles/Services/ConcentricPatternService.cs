@@ -145,8 +145,7 @@ namespace ConcentricCircles.Services
 
         private void DrawEllipse(Point3D centerPoint, double xDiameter, double yDiameter)
         {
-            var ellipse = GeometryCreationManager.CreateEllipse(centerPoint, xDiameter / 2, yDiameter / 2, 0.0);         
-            ellipse?.Commit();
+            GeometryCreationManager.CreateEllipse(centerPoint, xDiameter / 2, yDiameter / 2, 0.0);
         }
     }
 }

@@ -168,7 +168,7 @@
                 else
                     concentricPattern.DrawExpanding(centerPoint, StartDiameterX, PercentChange, NumberOfInstances);
             }
-            else
+            else if (PatternTypeIndex == 1)
             {
                 if (IsCollapsing)
                     concentricPattern.DrawCollapsing(centerPoint, StartDiameterX, StartDiameterY, PercentChange, NumberOfInstances);
